@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Web Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100">
+<div class="navbar bg-white shadow">
+  <div class="flex-1">
+    <a class="btn btn-ghost text-xl">Web Shop</a>
+  </div>
+  <div>
+    <a href="onama.html" class="btn btn-outline">O nama</a>
+  </div>
+</div>
+  <div class="hero min-h-[300px]" style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8');">
+  <div class="hero-overlay bg-opacity-60"></div>
+  <div class="text-center text-white">
+    <h1 class="text-5xl font-bold">Moj Web Shop</h1>
+  </div>
+</div>
+
+  <div class="flex flex-wrap gap-2 justify-center my-4">
+  <button onclick="filterProducts('sve')" class="btn">Sve</button>
+  <button onclick="filterProducts('majice')" class="btn">Majice</button>
+  <button onclick="filterProducts('hlače')" class="btn">Hlače</button>
+  <button onclick="filterProducts('jakne')" class="btn">Jakne</button>
+  <button onclick="filterProducts('dodaci')" class="btn">Dodaci</button>
+</div>
+<div id="products" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-5"></div>
+
+  
+  <div class="p-5 bg-white m-5 rounded shadow">
+    <h2 class="text-xl font-bold">Košarica</h2>
+
+    <ul id="cart"></ul>
+
+    <p class="font-bold mt-3">
+      Ukupno: <span id="total">0</span> €
+    </p>
+
+    <button onclick="goCheckout()"
+      class="bg-green-500 text-white px-4 py-2 mt-4 rounded hover:bg-green-600 w-full">
+      Dalje u kupnju
+    </button>
+  </div>
+
+<script src="java.js"></script>
+</body>
+</html>
